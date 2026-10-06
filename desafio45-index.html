@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQLD58L7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Desafio 45 — Escreva, Publique e Venda seu eBook em até 45 dias</title>
+<meta name="description" content="Aula online e gratuita: entenda o caminho Produto + Página + Tráfego para criar e vender seu primeiro eBook, mesmo começando do zero.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+<style>
+
+:root{
+  --c1: #160d18;
+  --c2: #23145b;
+  --c3: #09456c;
+  --c4: #026f6e;
+  --c5: #1ca39e;
+  --c5-soft: rgba(28,163,158,.14);
+  --c5-glow: rgba(28,163,158,.35);
+  --gold: #f6c66b;
+
+  --bg: #0c0710;
+  --bg-2: #160d18;
+  --bg-3: #1c1322;
+  --bg-card: #1f1428;
+
+  --border: rgba(255,255,255,.08);
+  --border-strong: rgba(255,255,255,.16);
+
+  --text: #f3eef7;
+  --text-dim: #c7bdd1;
+  --text-mute: #8b829a;
+
+  --alert: #ff7a59;
+  --alert-bg: rgba(255,122,89,.12);
+  --green: #1ca39e;
+  --red: #ff5c7a;
+  --red-bg: rgba(255,92,122,.1);
+
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+img{ max-width:100%; display:block; }
+
+a{ color:inherit; text-decoration:none; }
+
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:800; letter-spacing:-0.02em; line-height:1.15; }
+
+h1{ font-size:clamp(32px, 5.4vw, 58px); }
+h2{ font-size:clamp(28px, 3.8vw, 44px); }
+h3{ font-size:clamp(20px, 2.4vw, 26px); }
+
+.container{ max-width:1120px; margin:0 auto; padding:0 24px; }
+
+section{ padding:56px 0; position:relative; }
+@media (min-width:900px){ section{ padding:88px 0; } }
+
+/* Section backgrounds */
+.sec-bg-1{ background:var(--bg); }
+.sec-bg-2{
+  background:
+    radial-gradient(circle at 15% 20%, rgba(35,20,91,.55), transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(9,69,108,.4), transparent 55%),
+    var(--bg-2);
+}
+.sec-bg-3{ background:var(--bg-2); }
+.sec-bg-4{
+  background:
+    radial-gradient(circle at 80% 10%, rgba(35,20,91,.5), transparent 50%),
+    var(--bg-2);
+}
+
+/* Eyebrow */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-display); font-weight:700; font-size:12.5px;
+  letter-spacing:.06em; text-transform:uppercase;
+  color:var(--c5);
+  background:var(--c5-soft);
+  border:1px solid rgba(28,163,158,.3);
+  padding:7px 16px; border-radius:100px;
+  margin-bottom:18px;
+}
+
+.section-head{ text-align:center; max-width:720px; margin:0 auto 40px; }
+.section-head p{ color:var(--text-dim); font-size:17px; margin-top:14px; }
+
+/* Reveal */
+.reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.visible{ opacity:1; transform:translateY(0); }
+
+/* ============ HERO ============ */
+.hero{
+  background:
+    radial-gradient(circle at 20% 0%, rgba(35,20,91,.6), transparent 50%),
+    radial-gradient(circle at 90% 20%, rgba(9,69,108,.45), transparent 55%),
+    var(--bg);
+  padding:48px 0 64px;
+}
+.brand-mark{
+  font-family:var(--font-display); font-weight:800; font-size:15px;
+  letter-spacing:.04em; color:var(--text-mute);
+  display:inline-flex; align-items:baseline; gap:2px; margin-bottom:22px;
+}
+.brand-mark b{ color:var(--gold); font-size:16px; }
+.brand-logo{ height:52px; width:auto; display:block; }
+footer .brand-logo{ height:30px; }
+
+.hero-grid{
+  display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;
+}
+@media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:36px; } }
+
+.hero h1{ margin-bottom:18px; }
+.hero-h1-sub{
+  display:block; margin-top:12px;
+  font-size:clamp(19px, 2.6vw, 27px);
+  font-weight:700; color:var(--text-dim);
+  letter-spacing:-0.01em; line-height:1.25;
+}
+.hero-sub{ color:var(--text-dim); font-size:16px; max-width:520px; margin-bottom:26px; }
+
+.check-list{ list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
+.check-list li{
+  display:flex; align-items:flex-start; gap:12px;
+  font-size:15px; color:var(--text-dim);
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  padding:12px 16px; border-radius:12px;
+}
+.check-list .tick{
+  flex-shrink:0; width:20px; height:20px; border-radius:50%;
+  background:var(--c5-soft); color:var(--c5);
+  display:grid; place-items:center; font-size:12px; font-weight:700;
+  margin-top:1px;
+}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font-family:var(--font-display); font-weight:700; font-size:15.5px;
+  padding:17px 30px; border-radius:100px;
+  border:none; cursor:pointer;
+  transition:transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--c5), var(--c4));
+  color:#fff;
+  box-shadow:0 14px 32px rgba(28,163,158,.35), inset 0 1px 0 rgba(255,255,255,.18);
+}
+.btn-primary:hover{ transform:translateY(-2px) scale(1.02); filter:brightness(1.08); }
+.btn-block{ width:100%; }
+
+.hero-photo-wrap{ position:relative; }
+.hero-photo-glow{
+  position:absolute; inset:-30px;
+  background:radial-gradient(circle at 50% 40%, rgba(28,163,158,.3), transparent 60%);
+  filter:blur(40px); z-index:0; border-radius:24px;
+}
+.hero-photo-frame{
+  position:relative; z-index:1; border-radius:20px; overflow:hidden;
+  border:1px solid var(--border-strong);
+  box-shadow:0 30px 60px rgba(0,0,0,.5);
+  aspect-ratio:4/5;
+}
+.hero-photo-frame img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero-photo-fallback{
+  width:100%; aspect-ratio:4/5;
+  background:linear-gradient(135deg, var(--c3), var(--c2));
+  display:grid; place-items:center;
+  font-family:var(--font-display); font-weight:800; font-size:72px; color:rgba(255,255,255,.85);
+}
+
+.stat-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;
+}
+.stat-card{
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:12px; padding:12px 14px;
+  display:flex; align-items:center; gap:10px;
+  font-size:13px; color:var(--text-dim);
+}
+.stat-card .ic{
+  width:26px; height:26px; border-radius:8px;
+  background:var(--c5-soft); color:var(--c5);
+  display:grid; place-items:center; font-size:13px; flex-shrink:0;
+}
+
+/* ============ FEATURE / CHECK CARDS ============ */
+.cards-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
+.cards-grid.cols-3{ grid-template-columns:repeat(3, 1fr); }
+@media (max-width:900px){
+  .cards-grid, .cards-grid.cols-3{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:640px){
+  .cards-grid, .cards-grid.cols-3{ grid-template-columns:1fr; }
+}
+
+.info-card{
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:16px; padding:24px;
+  transition:transform .2s ease, border-color .2s ease;
+}
+.info-card:hover{ transform:translateY(-3px); border-color:var(--border-strong); }
+.info-card .ic{
+  width:38px; height:38px; border-radius:10px;
+  background:var(--c5-soft); color:var(--c5);
+  display:grid; place-items:center; font-size:17px; margin-bottom:14px;
+}
+.info-card h3{ font-size:16.5px; margin-bottom:8px; }
+.info-card p{ font-size:14.5px; color:var(--text-dim); }
+
+.info-card.alert .ic{ background:var(--alert-bg); color:var(--alert); }
+.info-card.red .ic{ background:var(--red-bg); color:var(--red); }
+.info-card.red{ border-color:rgba(255,92,122,.18); }
+
+.cta-center{ text-align:center; margin-top:36px; }
+
+/* ============ NOT-FOR-YOU CLOSING BOX ============ */
+.closing-box{
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:18px; padding:34px; text-align:center; margin-top:30px;
+}
+.closing-box p{ color:var(--text-dim); font-size:16px; max-width:640px; margin:0 auto 20px; }
+
+/* ============ NUMBERED TIMELINE ============ */
+.timeline{ position:relative; max-width:760px; margin:0 auto; }
+.timeline::before{
+  content:""; position:absolute; left:29px; top:10px; bottom:10px; width:1px;
+  background:linear-gradient(var(--c5), var(--gold));
+  opacity:.4;
+}
+.timeline-item{
+  display:flex; align-items:center; gap:20px;
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:14px; padding:18px 22px; margin-bottom:14px;
+  position:relative;
+}
+.timeline-num{
+  font-family:var(--font-display); font-weight:800; font-size:26px;
+  color:var(--c5); flex-shrink:0; width:38px; text-align:center;
+  position:relative; z-index:1;
+}
+.timeline-item:last-child .timeline-num{ color:var(--gold); }
+.timeline-item h3{ font-size:16px; font-weight:600; font-family:var(--font-display); color:var(--text); }
+
+/* ============ 3 PILARES ============ */
+.pillars-intro{ text-align:center; max-width:680px; margin:0 auto 40px; color:var(--text-dim); font-size:16px; }
+.pillars-intro::after{
+  content:""; display:block; width:60px; height:2px; background:var(--c5);
+  margin:22px auto 0; opacity:.5;
+}
+
+.problem-card{
+  background:linear-gradient(160deg, rgba(255,92,122,.07), rgba(31,20,40,.4));
+  border:1px solid rgba(255,92,122,.16);
+}
+.problem-card .ic{ background:var(--red-bg); color:var(--red); }
+
+.pillar-card{ text-align:left; }
+.pillar-tag{
+  font-family:var(--font-display); font-weight:700; font-size:11.5px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--gold);
+  margin-bottom:6px; display:block;
+}
+
+.eulalia-box{
+  display:flex; align-items:center; gap:16px;
+  background:var(--c5-soft); border:1px solid rgba(28,163,158,.3);
+  border-radius:16px; padding:20px 24px; margin:36px 0;
+  font-size:15px; color:var(--text-dim);
+}
+.eulalia-box .ic{
+  width:40px; height:40px; border-radius:10px; flex-shrink:0;
+  background:linear-gradient(135deg, var(--c5), var(--c4));
+  color:#fff; display:grid; place-items:center; font-size:18px;
+}
+
+.meta-line{
+  text-align:center; color:var(--text-mute); font-size:13.5px; margin-top:18px;
+}
+
+/* ============ ABOUT / QUEM É ============ */
+.about-grid{
+  display:grid; grid-template-columns:340px 1fr; gap:44px; align-items:center;
+}
+@media (max-width:900px){ .about-grid{ grid-template-columns:1fr; } }
+
+.about-photo-wrap{ position:relative; }
+.about-photo-frame{
+  border-radius:18px; overflow:hidden; border:1px solid var(--border-strong);
+  box-shadow:0 24px 50px rgba(0,0,0,.45);
+}
+.about-photo-frame img{ width:100%; height:auto; }
+
+/* Foto redonda no About */
+.about-photo-round{
+  border-radius:50%;
+  aspect-ratio:1/1;
+  max-width:320px; margin:0 auto;
+  border:3px solid rgba(28,163,158,.45);
+  box-shadow:0 20px 50px rgba(28,163,158,.28), 0 24px 50px rgba(0,0,0,.45);
+}
+.about-photo-round img{ width:100%; height:100%; object-fit:cover; }
+
+.about-photo-fallback{
+  width:100%; aspect-ratio:1/1;
+  background:linear-gradient(135deg, var(--c3), var(--c2));
+  display:grid; place-items:center;
+  font-family:var(--font-display); font-weight:800; font-size:64px; color:rgba(255,255,255,.85);
+}
+.about-badge{
+  position:absolute; background:var(--bg-card); border:1px solid var(--border-strong);
+  border-radius:12px; padding:10px 14px; font-family:var(--font-display);
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
+}
+.about-badge b{ display:block; font-size:16px; color:var(--c5); }
+.about-badge span{ font-size:11.5px; color:var(--text-mute); font-weight:500; }
+.badge-tl{ top:24px; left:0; }
+.badge-br{ bottom:24px; right:0; }
+@media (max-width:640px){
+  .badge-tl{ left:0; } .badge-br{ right:0; }
+}
+
+.about-copy .eyebrow{ margin-bottom:14px; }
+.about-copy p{ color:var(--text-dim); font-size:15.5px; margin-bottom:24px; }
+
+/* ============ FINAL CTA ============ */
+.final-box{
+  max-width:820px; margin:0 auto;
+  background:linear-gradient(160deg, rgba(35,20,91,.5), var(--bg-card));
+  border:1px solid var(--border-strong);
+  border-radius:24px; padding:44px 36px; text-align:center;
+  box-shadow:0 30px 70px rgba(0,0,0,.4);
+}
+.final-box h2{ margin-bottom:24px; }
+.info-badges{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:28px;
+}
+@media (max-width:640px){ .info-badges{ grid-template-columns:1fr; } }
+.info-badge{
+  background:rgba(255,255,255,.03); border:1px solid var(--border);
+  border-radius:12px; padding:16px; font-size:13.5px; color:var(--text-dim);
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+}
+.info-badge .ic{
+  width:32px; height:32px; border-radius:9px;
+  background:var(--c5-soft); color:var(--c5);
+  display:grid; place-items:center; font-size:15px;
+}
+.final-note{ margin-top:16px; font-size:13.5px; color:var(--text-mute); }
+
+/* ============ FOOTER ============ */
+footer{ background:var(--bg); border-top:1px solid var(--border); padding:36px 0; }
+.footer-top{
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:12px; margin-bottom:18px;
+}
+.footer-links{ display:flex; gap:20px; font-size:13.5px; color:var(--text-mute); }
+.footer-links a:hover{ color:var(--c5); }
+.footer-owner{ font-size:13.5px; color:var(--text-mute); margin-bottom:16px; }
+.legal-note{
+  font-size:12.5px; color:var(--text-mute); line-height:1.6;
+  background:rgba(255,255,255,.02); border:1px solid var(--border);
+  border-radius:12px; padding:16px 18px;
+}
+
+/* ============ STICKY MOBILE CTA ============ */
+.sticky-cta{
+  position:fixed; bottom:0; left:0; right:0; z-index:500;
+  background:var(--bg-2); border-top:1px solid var(--border-strong);
+  padding:12px 16px; display:none;
+  box-shadow:0 -10px 30px rgba(0,0,0,.4);
+  transform:translateY(0); transition:transform .3s ease;
+}
+.sticky-cta.hide{ transform:translateY(110%); }
+@media (max-width:640px){
+  .sticky-cta{ display:block; }
+  body{ padding-bottom:78px; }
+}
+
+/* ============ MODAL (captura de lead) ============ */
+.modal-overlay{
+  position:fixed; inset:0; z-index:2000;
+  background:rgba(6,3,10,.75); backdrop-filter:blur(4px);
+  display:none; align-items:center; justify-content:center; padding:20px;
+}
+.modal-overlay.open{ display:flex; }
+.modal-box{
+  background:var(--bg-card); border:1px solid var(--border-strong);
+  border-radius:20px; padding:32px; max-width:420px; width:100%;
+  box-shadow:0 40px 90px rgba(0,0,0,.5); position:relative;
+}
+.modal-close{
+  position:absolute; top:14px; right:16px; background:none; border:none;
+  color:var(--text-mute); font-size:22px; cursor:pointer; line-height:1;
+}
+.modal-box h3{ margin-bottom:8px; }
+.modal-box p.modal-sub{ color:var(--text-dim); font-size:14.5px; margin-bottom:22px; }
+.field{ margin-bottom:14px; }
+.field label{ display:block; font-size:13px; color:var(--text-dim); margin-bottom:6px; font-weight:600; }
+.field input{
+  width:100%; padding:13px 16px; border-radius:10px;
+  background:rgba(255,255,255,.04); border:1px solid var(--border-strong);
+  color:var(--text); font-size:15px; font-family:var(--font-body);
+}
+.field input:focus{ outline:none; border-color:var(--c5); background:rgba(28,163,158,.06); }
+.modal-disclaimer{ font-size:11.5px; color:var(--text-mute); margin-top:14px; text-align:center; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none!important; transition:none!important; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQLD58L7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="brand-mark"><img src="https://eduribeiro.com/desafio45/logo4.svg" alt="Desafio 45" class="brand-logo"></div>
+    <div class="hero-grid">
+      <div>
+        <h1 data-editable>Escreva, Publique e Venda o seu eBook em até 45 dias.<span class="hero-h1-sub" data-editable>Mesmo tendo perdido dinheiro em cursos ou nunca ter conseguido resultado.</span></h1>
+        <p class="hero-sub" data-editable>Na próxima terça-feira, às 20h, Edu Ribeiro vai mostrar como sair da confusão e entender o caminho simples de Produto + Página + Tráfego com IA para começar com direção.</p>
+
+        <ul class="check-list">
+          <li><span class="tick">✓</span><span data-editable>Para quem já tentou vender online e travou</span></li>
+          <li><span class="tick">✓</span><span data-editable>Para quem comprou cursos, mas ficou sozinho na execução</span></li>
+          <li><span class="tick">✓</span><span data-editable>Para quem quer criar um produto simples, específico e vendável</span></li>
+          <li><span class="tick">✓</span><span data-editable>Para quem não quer depender de audiência ou tecnologia complexa</span></li>
+        </ul>
+
+        <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga" type="button" onclick="openLeadModal('Hero')">🔓 Garantir minha vaga gratuita</button>
+      </div>
+
+      <div>
+        <div class="hero-photo-wrap reveal">
+          <div class="hero-photo-glow"></div>
+          <div class="hero-photo-frame">
+            <img src="https://eduribeiro.com/desafio45/perfil2.svg" alt="Edu Ribeiro" width="480" height="600" loading="lazy">
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><span class="ic">🏆</span><span data-editable>16 anos no mercado digital</span></div>
+          <div class="stat-card"><span class="ic">📦</span><span data-editable>180+ produtos vendidos</span></div>
+          <div class="stat-card"><span class="ic">🎓</span><span data-editable>8.000+ alunos formados</span></div>
+          <div class="stat-card"><span class="ic">📈</span><span data-editable>R$7M+ em vendas geradas</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ O QUE É O DESAFIO 45 ============ -->
+<section class="sec-bg-2">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">🎯 Entenda a proposta da aula</span>
+      <h2 data-editable>O que é o Desafio 45?</h2>
+      <p data-editable>É uma aula online e gratuita para pessoas comuns que querem entender, de forma simples e prática, como criar um produto digital, montar uma página de vendas e iniciar a divulgação sem precisar aparecer, sem ter audiência e sem dominar tecnologia.</p>
+    </div>
+
+    <div class="cards-grid reveal">
+      <div class="info-card">
+        <div class="ic">✅</div>
+        <h3 data-editable>Clareza do caminho</h3>
+        <p data-editable>Entenda por onde começar e qual sequência seguir para não travar na primeira decisão.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">📘</div>
+        <h3 data-editable>Produto digital simples</h3>
+        <p data-editable>Veja como pensar em um produto específico, de baixo ticket e com promessa clara.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">🖥️</div>
+        <h3 data-editable>Página que comunica valor</h3>
+        <p data-editable>Entenda o que uma página precisa ter para transformar atenção em interesse real.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">⚙️</div>
+        <h3 data-editable>Tráfego com direção</h3>
+        <p data-editable>Veja como começar a divulgar sem depender de audiência ou exposição pessoal.</p>
+      </div>
+    </div>
+
+    <div class="cta-center">
+      <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga-2" type="button" onclick="openLeadModal('O que é')">→ Quero garantir minha vaga</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA VOCÊ SE... ============ -->
+<section class="sec-bg-3">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">👤 Veja se isso combina com você</span>
+      <h2 data-editable>O Desafio 45 é para você se...</h2>
+    </div>
+
+    <div class="cards-grid cols-3 reveal">
+      <div class="info-card">
+        <div class="ic">✅</div>
+        <h3 data-editable>Não sabe por onde começar</h3>
+        <p data-editable>Já estudou sobre marketing digital, mas não sabe por onde começar.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">🧩</div>
+        <h3 data-editable>Conhecimento fragmentado</h3>
+        <p data-editable>Tem conhecimento fragmentado e quer transformar em ação prática.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">🧭</div>
+        <h3 data-editable>Falta clareza e direção</h3>
+        <p data-editable>Já fez cursos, mas falta clareza e direcionamento para avançar.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">🧑‍🏫</div>
+        <h3 data-editable>Quer um mentor</h3>
+        <p data-editable>Quer um mentor que corrija seu caminho, não apenas mais aulas gravadas.</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">⚡</div>
+        <h3 data-editable>Pronto para executar</h3>
+        <p data-editable>Está pronto para executar consistentemente (mesmo que não seja expert).</p>
+      </div>
+      <div class="info-card">
+        <div class="ic">📈</div>
+        <h3 data-editable>Escalar resultados</h3>
+        <p data-editable>Quer escalar os resultados dos projetos que já iniciou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NÃO É PARA VOCÊ SE... ============ -->
+<section class="sec-bg-3">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 style="color:var(--red)" data-editable>O Desafio 45 NÃO é para você se...</h2>
+    </div>
+
+    <div class="cards-grid cols-3 reveal">
+      <div class="info-card red">
+        <div class="ic">🔥</div>
+        <h3 data-editable>Busca atalhos rápidos</h3>
+        <p data-editable>Está buscando atalhos ou promessas de dinheiro rápido.</p>
+      </div>
+      <div class="info-card red">
+        <div class="ic">📴</div>
+        <h3 data-editable>Nunca estudou o básico</h3>
+        <p data-editable>Nunca estudou nada sobre digital (comece pelo Outlier).</p>
+      </div>
+      <div class="info-card red">
+        <div class="ic">🙅</div>
+        <h3 data-editable>Quer que façam por você</h3>
+        <p data-editable>Quer alguém para "fazer por você" ao invés de fazer junto com você.</p>
+      </div>
+      <div class="info-card red">
+        <div class="ic">📺</div>
+        <h3 data-editable>Só consumir conteúdo</h3>
+        <p data-editable>Só quer consumir mais conteúdo sem colocar em prática.</p>
+      </div>
+      <div class="info-card red">
+        <div class="ic">🚫</div>
+        <h3 data-editable>Não aceita correções</h3>
+        <p data-editable>Não está disposto a ser guiado, cobrado e corrigido.</p>
+      </div>
+    </div>
+
+    <div class="closing-box reveal">
+      <p data-editable>Se você quer direção, processo e um próximo passo claro, esse desafio foi criado para te mostrar o que fazer primeiro.</p>
+      <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga-3" type="button" onclick="openLeadModal('Fechamento não é para você')">→ Quero garantir minha vaga</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ VAI VER ============ -->
+<section class="sec-bg-2">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 data-editable>O que você vai ver no Desafio 45</h2>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <span class="timeline-num">01</span>
+        <h3 data-editable>Por que a maioria trava mesmo consumindo muitos cursos</h3>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-num">02</span>
+        <h3 data-editable>Como pensar em um produto digital simples e vendável</h3>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-num">03</span>
+        <h3 data-editable>O caminho Produto + Página + Tráfego</h3>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-num">04</span>
+        <h3 data-editable>Como a IA pode acelerar a execução</h3>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-num">05</span>
+        <h3 data-editable>O próximo passo para quem quer acompanhamento</h3>
+      </div>
+    </div>
+
+    <div class="cta-center">
+      <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga-4" type="button" onclick="openLeadModal('O que você vai ver')">→ Quero garantir minha vaga</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 PILARES ============ -->
+<section class="sec-bg-4">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">🛠️ Os 3 pilares do processo</span>
+      <h2 data-editable>O caminho certo é mais simples do que parece: Produto + Página + Tráfego</h2>
+    </div>
+
+    <p class="pillars-intro reveal" data-editable>A maioria das pessoas tenta vender online pulando etapas. Quer fazer anúncio antes de ter uma promessa clara. Quer montar página antes de entender o produto. Quer criar conteúdo antes de saber para quem está falando. Edu Ribeiro organiza esse processo em 3 pilares simples:</p>
+
+    <div class="cards-grid cols-3 reveal">
+      <div class="info-card problem-card">
+        <div class="ic">📣</div>
+        <h3 data-editable>Anunciar antes da hora</h3>
+        <p data-editable>Muita gente tenta colocar tráfego antes de ter uma promessa clara e uma oferta simples.</p>
+      </div>
+      <div class="info-card problem-card">
+        <div class="ic">🖥️</div>
+        <h3 data-editable>Montar página sem base</h3>
+        <p data-editable>Sem entender o produto, a página vira só um layout bonito sem direção nem conversão.</p>
+      </div>
+      <div class="info-card problem-card">
+        <div class="ic">💬</div>
+        <h3 data-editable>Falar sem clareza</h3>
+        <p data-editable>Criar conteúdo antes de definir para quem se fala aumenta a confusão e atrasa a execução.</p>
+      </div>
+    </div>
+
+    <div class="cards-grid cols-3 reveal" style="margin-top:16px;">
+      <div class="info-card pillar-card">
+        <span class="pillar-tag">Pilar 1</span>
+        <h3 data-editable>Produto</h3>
+        <p data-editable>Escolher uma dor específica, uma promessa clara e um produto digital simples de executar.</p>
+      </div>
+      <div class="info-card pillar-card">
+        <span class="pillar-tag">Pilar 2</span>
+        <h3 data-editable>Página</h3>
+        <p data-editable>Criar uma página que explique o valor, quebre objeções e conduza o lead para o próximo passo.</p>
+      </div>
+      <div class="info-card pillar-card">
+        <span class="pillar-tag">Pilar 3</span>
+        <h3 data-editable>Tráfego</h3>
+        <p data-editable>Colocar a oferta na frente das pessoas certas sem depender de audiência, exposição pessoal ou conteúdo infinito.</p>
+      </div>
+    </div>
+
+    <div class="eulalia-box reveal">
+      <span class="ic">🤖</span>
+      <span data-editable>Com a Eulália IA, esse processo fica mais rápido porque a IA ajuda a estruturar nicho, avatar, copy, eBook, página e anúncios.</span>
+    </div>
+
+    <div class="cta-center">
+      <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga-5" type="button" onclick="openLeadModal('3 Pilares')">→ Quero garantir minha vaga</button>
+      <p class="meta-line" data-editable>Online e gratuito • Próxima terça-feira, às 20h • Canal do YouTube</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUEM É EDU RIBEIRO ============ -->
+<section class="sec-bg-3">
+  <div class="container">
+    <div class="about-grid reveal">
+      <div class="about-photo-wrap">
+        <div class="about-photo-frame about-photo-round">
+          <img src="https://eduribeiro.com/desafio45/perfil3.svg" alt="Edu Ribeiro" width="320" height="320" loading="lazy">
+        </div>
+        <div class="about-badge badge-tl">
+          <b data-editable>16 anos</b>
+          <span data-editable>vivendo do digital</span>
+        </div>
+        <div class="about-badge badge-br">
+          <b data-editable>R$7 mi</b>
+          <span data-editable>em vendas geradas</span>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <span class="eyebrow">🏅 Experiência real de mercado</span>
+        <h2 data-editable>Quem é Edu Ribeiro?</h2>
+        <p data-editable>Edu Ribeiro atua no mercado digital há 16 anos. Começou em 2010 com um site de compras coletivas e, desde então, criou mais de 180 produtos digitais, formou mais de 8.000 alunos e ajudou a gerar mais de R$7 milhões em vendas entre projetos próprios, mentorias e consultorias. Ele também é criador da Eulália, uma agente de IA treinada para ajudar na criação de produtos digitais de baixo ticket, copy, páginas e anúncios. A diferença é que Edu não ensina a partir de teoria bonita. Ele construiu sua experiência no campo de batalha, testando, errando, ajustando e criando sistemas simples para vender online mesmo quando a vida aperta.</p>
+        <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga-6" type="button" onclick="openLeadModal('Quem é Edu')">→ Quero garantir minha vaga</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-bg-2" id="comprar">
+  <div class="container">
+    <div class="final-box reveal">
+      <span class="eyebrow">⚡ Decisão com mais clareza</span>
+      <h2 data-editable>Você pode continuar tentando sozinho ou entender o caminho certo na próxima terça-feira.</h2>
+
+      <div class="info-badges">
+        <div class="info-badge"><span class="ic">🖥️</span><span data-editable>Online e gratuito</span></div>
+        <div class="info-badge"><span class="ic">💰</span><span data-editable>Próxima terça-feira, às 20h</span></div>
+        <div class="info-badge"><span class="ic">▶️</span><span data-editable>Canal do YouTube</span></div>
+      </div>
+
+      <button class="btn btn-primary js-cta-contact" id="btn-garantir-vaga-7" type="button" onclick="openLeadModal('Final')">→ Quero garantir minha vaga</button>
+      <p class="final-note" data-editable>Preencha nome, WhatsApp e e-mail para receber as informações de acesso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="brand-mark"><img src="https://eduribeiro.com/desafio45/logo4.svg" alt="Desafio 45" class="brand-logo"></div>
+      <div class="footer-links">
+        <a href="https://www.eduribeiro.com/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+        <a href="https://www.eduribeiro.com/politica-de-privacidade/" target="_blank" rel="noopener">Termos de Uso</a>
+      </div>
+    </div>
+    <p class="footer-owner" data-editable>Edu Ribeiro Negócios Digitais. Todos os direitos reservados.</p>
+    <div class="legal-note" data-editable>
+      Este evento é gratuito e educacional. Não garantimos resultados financeiros. Resultados variam conforme dedicação, execução, mercado e fatores individuais.
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="sticky-cta" id="stickyCta">
+  <button class="btn btn-primary btn-block js-cta-contact" id="btn-garantir-vaga-8" type="button" onclick="openLeadModal('Sticky mobile')">🔓 Garantir minha vaga gratuita</button>
+</div>
+
+<!-- ============ MODAL DE CAPTURA ============ -->
+<div class="modal-overlay" id="leadModal">
+  <div class="modal-box">
+    <button class="modal-close" type="button" onclick="closeLeadModal()">×</button>
+    <h3>Garanta sua vaga no Desafio 45</h3>
+    <p class="modal-sub">Preencha seus dados para receber o link de acesso à aula ao vivo.</p>
+
+    <!-- Formulário SellFlux (POST + redirect para página de obrigado) -->
+    <form id="form-captura-lead" method="post" action="https://webhook.sellflux.app/v2/webhook/form/6dbbc1dcbcbaab70ae10d3ad215ea469?not_query=true&redirect_url=https%3A%2F%2Feduribeiro.com%2Fdesafio45-obrigado">
+      <div class="container_html" style="width: 100%;">
+        <div style="margin-bottom:1rem;">
+          <input type="text" id="name-2" name="name" value="" placeholder="Insira seu nome" required style="display:block; width:100%; padding:.65rem .9rem; font-size:1rem; font-weight:400; line-height:1.5; color:#f3eef7; background-color:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.16); border-radius:10px;" />
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <input type="email" id="email-2" name="email" value="" placeholder="Insira seu melhor e-mail" required style="display:block; width:100%; padding:.65rem .9rem; font-size:1rem; font-weight:400; line-height:1.5; color:#f3eef7; background-color:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.16); border-radius:10px;" />
+        </div>
+
+        <div class="form-group-2">
+          <select class="form-control" id="ddi-2"></select>
+          <input
+            data-phone-with-ddi=""
+            type="tel"
+            id="tel-2"
+            name="phone"
+            maxlength="15"
+            placeholder="(00) 00000-0000"
+            required
+            style="flex:1; padding:.65rem .9rem; font-size:1rem; font-weight:400; line-height:1.5; color:#f3eef7; background-color:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.16); border-radius:0 10px 10px 0;"
+          />
+        </div>
+
+        <input type="submit" value="🔓 CONFIRMAR MINHA VAGA GRATUITA" style="display:block; width:100%; line-height:1.5; text-align:center; text-decoration:none; vertical-align:middle; cursor:pointer; font-size:1rem; margin-top:20px; font-weight:700; text-transform:uppercase; padding:14px; background-color:#16b763; color:#fff; border-radius:12px; box-shadow:0 -1px 24px 0 rgba(22,183,99,.55); border:1px solid transparent;" />
+
+        <style>
+          #form-captura-lead .container_html input[type="text"],
+          #form-captura-lead .container_html input[type="email"],
+          #form-captura-lead .container_html input[type="number"] {
+            width: 100% !important;
+            box-sizing: border-box !important;
+          }
+          #form-captura-lead .container_html input::placeholder { color:#8b829a; }
+
+          #form-captura-lead .form-group-2 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+          }
+
+          #form-captura-lead .form-group-2 select,
+          #form-captura-lead .form-group-2 input[type="tel"] {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #f3eef7;
+            background-color: rgba(255,255,255,.04) !important;
+            padding: .65rem .9rem !important;
+            height: calc(2.6rem + 2px) !important;
+            border: 1px solid rgba(255,255,255,.16) !important;
+            box-sizing: border-box !important;
+          }
+          #form-captura-lead .form-group-2 select option { color:#212529; }
+
+          #form-captura-lead .form-group-2 select {
+            border-right: none !important;
+            border-radius: 10px 0 0 10px !important;
+            max-width: 28% !important;
+          }
+          #form-captura-lead .container_html { transition: width 0.5s; }
+
+          @media (max-width: 600px) {
+            #form-captura-lead .container_html { width: 100% !important; }
+          }
+          #form-captura-lead .form-group-2 input[type="tel"] {
+            flex: 1;
+            border-radius: 0 10px 10px 0;
+            height: 100%;
+          }
+        </style>
+      </div>
+    </form>
+
+    <p class="modal-disclaimer">Seus dados estão seguros e serão usados apenas para envio das informações de acesso ao Desafio 45.</p>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ===== Reveal on scroll ===== */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+/* ===== Sticky CTA hide near final offer ===== */
+(function(){
+  var offer = document.getElementById('comprar');
+  var sticky = document.getElementById('stickyCta');
+  if(!offer || !sticky || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      sticky.classList.toggle('hide', entry.isIntersecting);
+    });
+  }, { threshold:0.1 });
+  io.observe(offer);
+})();
+
+/* ===== Lead capture modal ===== */
+var sellfluxScriptLoaded = false;
+function openLeadModal(source){
+  document.getElementById('leadModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if(!sellfluxScriptLoaded){
+    sellfluxScriptLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://webhook.sellflux.app/v2/script_form.js';
+    document.body.appendChild(s);
+  }
+}
+function closeLeadModal(){
+  document.getElementById('leadModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('leadModal').addEventListener('click', function(e){
+  if(e.target === this) closeLeadModal();
+});
+</script>
+
+
+</body>
+</html>
